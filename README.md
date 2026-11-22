@@ -119,7 +119,7 @@ git fetch origin pull/488/head:pr488 && git checkout pr488   # any PR number
 cd .. && python3 -m nutlint ./nuts
 ```
 
-This also works on the proposed Keysets v3 branch ([cashubtc/nuts#443](https://github.com/cashubtc/nuts/pull/443)): nutlint reads superseded NUTs from `legacy/` and re-derives the new NUT-28 slot-map vectors (slot0/slot1 blinding scalars and keys). On Nov 19, 2026, #443 and the PRs stacked on it passed 174/174 (re-checked Nov 20 on heads updated overnight and again on the Nov 20 afternoon heads, e.g. #443 at 10d8a69: still 174/174; #490 passes 243/243).
+This also works on the proposed Keysets v3 branch ([cashubtc/nuts#443](https://github.com/cashubtc/nuts/pull/443)): nutlint reads superseded NUTs from `legacy/` and re-derives the new NUT-28 slot-map vectors (slot0/slot1 blinding scalars and keys). On Nov 19, 2026, #443 and the PRs stacked on it passed 174/174 (re-checked Nov 20 on heads updated overnight and again on the Nov 20 afternoon heads, e.g. #443 at 10d8a69: still 174/174; #490 passes 243/243). Re-checked Nov 22 on the latest heads (#443 cb1190a, #445 e7c3bea, #457 29993c5, #464 611640b): 174/174 each.
 
 A PR that edits a test vector should still end with `0 failed`; a new `FAIL` line points at the vector that no longer matches the code path it describes.
 
